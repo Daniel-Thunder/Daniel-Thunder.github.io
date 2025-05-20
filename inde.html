@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PARA TI </title>
+  <style>
+    body {
+      background: black;
+      color: hotpink;
+      font-family: monospace;
+      overflow: hidden;
+      white-space: pre;
+    }
+    .column {
+      position: absolute;
+      top: 0;
+      animation: fall 5s linear infinite;
+    }
+    @keyframes fall {
+      0% { top: -100%; }
+      100% { top: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    for (let i = 0; i < 20; i++) {
+      let col = document.createElement('div');
+      col.className = 'column';
+      col.style.left = `${i * 5}vw`;
+      col.innerText = "TE\nAMO\nTE\nAMO\nTE\nAMO\nTE\nAMO";
+      col.style.animationDelay = `${Math.random() * 5}s`;
+      document.body.appendChild(col);
+    }
+  </script>
+</body>
+</html>
